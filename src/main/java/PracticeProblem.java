@@ -7,17 +7,14 @@ public class PracticeProblem {
 	public static int sumOfDigits(int x){
 
 		if (x < 0){
-			return x = -x;
+			x = -x;
 		}
 
-		if (x <= 9){
+		if (x <= 9 && x>= 0){
 			return x;
 		}
 
-		return (x %10) + (x/10);
+		return (x %10) + sumOfDigits(x/10);
 	}
 	}
 
-	
-
-}
